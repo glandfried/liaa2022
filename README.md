@@ -1,2 +1,2 @@
 # liaa2022
-Charla: "La función de costo universal"
+Charla: "La función de costo epistémica"

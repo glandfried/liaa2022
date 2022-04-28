@@ -1,0 +1,76 @@
+\documentclass[shownotes,aspectratio=169]{beamer}
+
+\input{auxiliar/tex/diapo_encabezado.tex}
+\input{auxiliar/tex/tikzlibrarybayesnet.code.tex}
+ \mode<presentation>
+ {
+ %   \usetheme{Madrid}      % or try Darmstadt, Madrid, Warsaw, ...
+ %   \usecolortheme{default} % or try albatross, beaver, crane, ...
+ %   \usefonttheme{serif}  % or try serif, structurebold, ...
+  \usetheme{Antibes}
+  \setbeamertemplate{navigation symbols}{}
+ }
+ 
+\usepackage{todonotes}
+\setbeameroption{show notes}
+
+
+\estrue
+
+
+
+%\title[Bayes del Sur]{}
+
+\begin{document}
+
+\color{black!85}
+\large
+
+ 
+%\setbeamercolor{background canvas}{bg=gray!15}
+
+\begin{frame}[plain,noframenumbering]
+
+
+\begin{textblock}{160}(0,0)
+\includegraphics[width=1\textwidth]{auxiliar/images/deforestacion}
+\end{textblock}
+
+\begin{textblock}{80}(22,10)
+\textcolor{black!15}{\fontsize{44}{55}\selectfont Pacha}
+\end{textblock}
+
+\begin{textblock}{47}(100,70)
+\centering \textcolor{black!5}{{\fontsize{52}{65}\selectfont Pampas}}
+\end{textblock}
+
+\begin{textblock}{80}(100,28)
+\LARGE  \textcolor{black!15}{\rotatebox[origin=tr]{-3}{\scalebox{9}{\scalebox{1}[-1]{$p$}}}}
+\end{textblock}
+
+
+\begin{textblock}{80}(66,43)
+\LARGE  \textcolor{black!15}{\scalebox{6}{$=$}}
+\end{textblock}
+
+\begin{textblock}{80}(36,29)
+\LARGE  \textcolor{black!15}{\scalebox{9}{$p$}}
+\end{textblock}
+
+ \vspace{2cm}brown
+\maketitle
+
+
+% Lugar
+\begin{textblock}{160}(01,80)
+\scriptsize \textcolor{black!5}{Viernes 6 de Mayo 2022 \\ Laboratorio de Inteligencia Artificial \\ Buenos Aires, Argentina}
+\end{textblock} 
+
+\end{frame}
+
+
+
+\end{document}
+
+
+
