@@ -71,7 +71,7 @@
 \begin{textblock}{160}(01,73)
 \scriptsize \textcolor{black!5}{Seminario LIAA, 12hs Viernes 6 de Mayo 2022 \\
 Laboratorio de Inteligencia Artificial Aplicada \\ 
-Sala 1506, Pabellón \texttt{(0 + inf)} ``de Kirchner'' \\
+Sala 1508, Pabellón \texttt{(0+Inf)} ``de Kirchner'' \\
 Facultad de Ciencias Exactas y Naturales \\ 
 Universidad de Buenos Aires, Argentina}
 \end{textblock} 
@@ -223,7 +223,7 @@ Poblaciones de tamaño infinito
 \only<1>{
 \begin{textblock}{160}(0,22)
 \begin{equation*}
-\langle \omega \rangle_t = \sum_{\omega} \omega \cdot  P(\omega)
+\langle \omega(t) \rangle = \sum_{\omega(t)} \omega(t) \cdot  P(\omega(t))
 \end{equation*}
 \end{textblock}
 }
@@ -232,8 +232,8 @@ Poblaciones de tamaño infinito
 \begin{textblock}{160}(0,12)
 \begin{equation*}
 \begin{split}
-\langle \omega \rangle_1 & = 1.5 \cdot \frac{1}{2} + 0.6 \cdot  \frac{1}{2} = 1.05 \\ 
-\onslide<3->{\langle \omega \rangle_2 &=  1.5^2 \cdot \frac{1}{4} + 2 (0.6 \cdot 1.5 \cdot \frac{1}{4} ) + 0.6^2 \cdot \frac{1}{4}= 1.05^2 }
+\langle \omega(1) \rangle & = 1.5 \cdot \frac{1}{2} + 0.6 \cdot  \frac{1}{2} = 1.05 \\ 
+\onslide<3->{\langle \omega(2) \rangle &=  1.5^2 \cdot \frac{1}{4} + 2 (0.6 \cdot 1.5 \cdot \frac{1}{4} ) + 0.6^2 \cdot \frac{1}{4}= 1.05^2 }
 \end{split}
 \end{equation*}
 \end{textblock}
@@ -275,7 +275,7 @@ Trayectorias individuales en el tiempo
 \begin{equation*} 
 \begin{split}
 \omega(T) & = \prod^T_{t=1} f(\Aa(t)) = f(\text{\en{head}\es{cara}})^{n_1} f(\text{\en{tail}\es{sello}})^{n_2}  \approx r^T \\
-\onslide<3->{\left( \lim_{T \rightarrow \infty} \omega_e(T) \right)^{1/T} & =  r}  \onslide<4->{= 1.5^{1/2} \cdot 0.6^{1/2}} \onslide<5>{ \approx 0.95 } 
+\onslide<3->{\left( \lim_{T \rightarrow \infty} \omega(T) \right)^{1/T} & =  r}  \onslide<4->{= 1.5^{1/2} \cdot 0.6^{1/2}} \onslide<5>{ \approx 0.95 } 
 \end{split}
 \end{equation*}
 \end{textblock}
@@ -300,10 +300,10 @@ Cooperación
     \node[latent, minimum size=2cm ] (x1_0) {$\omega_1(t)$} ;
     \node[latent, below=of x1_0, minimum size=2cm ] (x2_0) {$\omega_2(t)$} ;
 
-    \node[latent, right=of x1_0, minimum size=3cm ] (x1_0g) {$ \omega_1(t)\cdot f(\Aa_1(t))$} ;
-    \node[latent, right=of x2_0, minimum size=1.8cm, xshift=0.6cm , align=left] (x2_0g) {$\omega_2(t)\cdot$\\$f(\Aa_2(t))$} ;
+    \node[latent, right=of x1_0, minimum size=3cm ] (x1_0g) {$ \omega_1(t)\cdot f(\text{Cara})$} ;
+    \node[latent, right=of x2_0, minimum size=1.8cm, xshift=0.6cm , align=left] (x2_0g) {$\omega_2(t)\cdot$\\$f(\text{Seca})$} ;
     
-    \node[latent, right=of x1_0g, minimum size=3.8cm, yshift=-1.33cm, align=right] (x_0) {$\omega_1(t)\cdot f(\Aa_1(t))$\\$+\omega_2(t)\cdot f(\Aa_2(t))$ } ;
+    \node[latent, right=of x1_0g, minimum size=3.8cm, yshift=-1.33cm, align=right] (x_0) {$\omega_1(t)\cdot f(\text{Cara})$\\$+\omega_2(t)\cdot f(\text{Seca})$ } ;
     
     \node[const, above=of x_0] (nx_0) {$\overbrace{\text{Pool}\hspace{2.5cm}\text{Share}}^{\text{\normalsize Coopera\en{tion}\es{ci\'on}}}$} ;
     
@@ -329,16 +329,18 @@ Cooperación
 
 \centering
 
-\begin{textblock}{140}(05,12)
-\only<1-3>{\includegraphics[width=0.6\linewidth]{figures/pdf/ergodicity_desertion0.pdf}}\only<4>{\includegraphics[width=0.6\linewidth]{figures/pdf/ergodicity_desertion1.pdf}}\only<5->{\includegraphics[width=0.6\linewidth]{figures/pdf/ergodicity_desertion.pdf}}
+\begin{textblock}{140}(05,14
+ )
+\only<1-3>{\includegraphics[width=0.5\linewidth]{figures/pdf/ergodicity_desertion0.pdf}}\only<4>{\includegraphics[width=0.5\linewidth]{figures/pdf/ergodicity_desertion1.pdf}}\only<5->{\includegraphics[width=0.5\linewidth]{figures/pdf/ergodicity_desertion.pdf}}
 \end{textblock}
 
 
 \only<2->{
-\begin{textblock}{140}(10,64)
+\begin{textblock}{160}(0,57)
 \begin{equation*} 
 \begin{split}
-\omega_{t+1} &= \frac{1}{N} \big(\overbrace{\omega_t \, f(\text{Cara}) \, n_c + \omega_t \, f(\text{Seca}) \, n_s }^{\text{Fondo común}}  \big) \onslide<3->{\overset{\hfrac{\lim }{N\rightarrow \infty}}{=} \omega_t (\underbrace{f(\text{Cara}) \, p ) + (f(\text{Seca}) \, (1-p) }_{\text{Tasa de crecimiento}})   \\}
+\omega(t+1) & \ \, = \frac{1}{N} \big(\overbrace{\omega(t) \, f(\text{Cara}) \, n_c + \omega(t) \, f(\text{Seca}) \, n_s }^{\text{Fondo común}}  \big) \\
+& \onslide<3->{\overset{\hfrac{\lim }{N\rightarrow \infty}}{=}  \omega(t) (\underbrace{f(\text{Cara}) \, p ) + (f(\text{Seca}) \, (1-p) }_{\text{Tasa de crecimiento}})   \\}
 \end{split}
 \end{equation*}
 \end{textblock}
@@ -355,7 +357,7 @@ Cooperación
 
  \begin{tabular}{|l|c|c|c|c|c|}
      \hline
-         & {\small \ $\omega_0$ \ } & {\small \  $f(\cdot) \ $}  & {\small \ $\omega_1$ \ } & {\small \  $f(\cdot) \ $}  & {\small \ $\omega_2$ \ }  \\ \hline \hline
+         & {\small \, $\omega(0)$ } & {\small \  $f(\cdot) \ $}  & {\small \, $\omega(1)$ } & {\small \  $f(\cdot) \ $}  & {\small \,  $\omega(2)$ }  \\ \hline \hline
         A no-coop& $1$ & $1.5$ &  $1.5$ & $0.6$ & $\bm{0.9}$ \\ \hline
         B no-coop & $1$ & $0.6$ & $0.6$ & $1.5$ & $\bm{0.9}$ \\ \hline\hline
         A coop & $1$ & $1.5$ & $1.05$ & $0.6$ & $\bm{1.1}$ \\ \hline
@@ -372,6 +374,50 @@ Cooperación
 
 \end{frame}
 
+
+\begin{frame}[plain]
+\begin{textblock}{160}(0,4)
+ \centering \LARGE Cooperación \\
+ \Large Células que viven en células
+\end{textblock}
+\vspace{1.3cm} \centering
+
+\includegraphics[width=1\textwidth]{auxiliar/images/cloroplastos}
+
+\end{frame}
+
+\begin{frame}[plain]
+\begin{textblock}{160}(0,4)
+ \centering \LARGE Cooperación \\
+ \Large Organismos multicelulares
+\end{textblock}
+\vspace{1.3cm} \centering
+
+\includegraphics[width=1\textwidth]{auxiliar/images/fotosintesis}
+
+\end{frame}
+
+\begin{frame}[plain]
+\begin{textblock}{160}(0,4)
+ \centering \LARGE Cooperación \\
+ \Large Sistemas sociales
+\end{textblock}
+\vspace{1.3cm} \centering
+
+\includegraphics[width=0.75\textwidth]{auxiliar/images/hormigas}
+
+\end{frame}
+
+\begin{frame}[plain]
+\begin{textblock}{160}(0,4)
+ \centering \LARGE Cooperación \\
+ \Large Comunidad ecológica (biocenosis)
+\end{textblock}
+\vspace{1.3cm} \centering
+
+\includegraphics[width=0.70\textwidth]{auxiliar/images/tsimane}
+
+\end{frame}
 
 \begin{frame}[plain]
 
@@ -518,8 +564,8 @@ Pascal-Fermat (1654)
 \vspace{0.3cm}
 
 Tiramos dos veces la moneda: \\ \justify 
-$\bullet$ Si sale seca en la primera y en la segunda, roja hace un favor. \\
-$\bullet$ Caso contrario, negra hace un favor. \\
+$\bullet$ Rojas hace un favor cuando sale Seca en la primera y en la segunda \\
+$\bullet$ Negras hace un favor en caso contrario. \\[0.2cm]
 
 \centering
 
@@ -529,7 +575,7 @@ $\bullet$ Caso contrario, negra hace un favor. \\
 \node[latent,below=of b0,yshift=0.7cm, xshift=1cm] (r2) {$C$};
 
 \node[latent, below=of r1, draw=white, yshift=0.8cm, minimum size=0.1cm] (bc11) {};
-\node[accion, below=of r2, draw=white, yshift=0cm] (bc12) {};
+\node[accion, below=of r2, yshift=0cm] (bc12) {};
 \node[latent,below=of bc11,yshift=0.8cm, xshift=-0.5cm] (r1d2) {$S$};
 \node[latent,below=of bc11,yshift=0.8cm, xshift=0.5cm] (r1d3) {$C$};
 
@@ -555,6 +601,8 @@ $\bullet$ Caso contrario, negra hace un favor. \\
 }
 
 \end{frame}
+
+
 
 
 \begin{frame}[plain]
