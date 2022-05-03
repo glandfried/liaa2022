@@ -604,7 +604,8 @@ $\bullet$ Negras hace un favor en caso contrario. \\[0.2cm]
 
 \begin{frame}[plain]
 \begin{textblock}{160}(0,4)
-\LARGE \centering Teoría de la probabilidad 
+\LARGE \centering Teoría de la probabilidad \\
+\Large Breve resumen
 \end{textblock} 
 \vspace{1cm} \centering \Large
 
@@ -714,22 +715,22 @@ Primer acuerdo intersubjetivo en contextos de incertidumbre
 \end{textblock}
 }
 
-\only<8->{
- \begin{textblock}{80}(-10,20) \centering
- \scalebox{0.8}{
-\tikz{ %
-         \node[factor, minimum size=1cm] (p1) {\includegraphics[width=0.05\textwidth]{auxiliar/images/cerradura.png}} ;
-         \node[det, minimum size=1cm, xshift=1.5cm] (p2) {\includegraphics[width=0.06\textwidth]{auxiliar/images/dedo.png}} ;
-         \node[factor, minimum size=1cm, xshift=3cm] (p3) {} ;
-         
-         
-         \node[const, above=of p1, yshift=-0.05cm] (np1) {\Large $1/3$};
-         \node[const, above=of p2, yshift=0.1cm] (np2) {\Large $0$};
-         \node[const, above=of p3, yshift=-0.05cm] (np3) {\Large $2/3$};
-         } 
-}
-\end{textblock}
-}
+% \only<8->{
+%  \begin{textblock}{80}(-10,20) \centering
+%  \scalebox{0.8}{
+% \tikz{ %
+%          \node[factor, minimum size=1cm] (p1) {\includegraphics[width=0.05\textwidth]{auxiliar/images/cerradura.png}} ;
+%          \node[det, minimum size=1cm, xshift=1.5cm] (p2) {\includegraphics[width=0.06\textwidth]{auxiliar/images/dedo.png}} ;
+%          \node[factor, minimum size=1cm, xshift=3cm] (p3) {} ;
+%          
+%          
+%          \node[const, above=of p1, yshift=-0.05cm] (np1) {\Large $1/3$};
+%          \node[const, above=of p2, yshift=0.1cm] (np2) {\Large $0$};
+%          \node[const, above=of p3, yshift=-0.05cm] (np3) {\Large $2/3$};
+%          } 
+% }
+% \end{textblock}
+% }
 
 
 \only<5->{
@@ -771,11 +772,6 @@ Datos \\[0.5cm]
 \large Principio de coherencia (Regla del producto)\\
 \normalsize
 Creencia previa que sigue siendo compatible con datos y modelo
-
-\only<8->{
-
-
-}
 \end{textblock}
 }
 
@@ -811,7 +807,7 @@ Creencia previa que sigue siendo compatible con datos y modelo
  \end{textblock}
  }
 
-  \only<4-12>{
+  \only<4-13>{
  \begin{textblock}{80}(0,22)
   \centering
   $P(r,s)$ \\ \vspace{0.3cm}
@@ -824,7 +820,7 @@ Creencia previa que sigue siendo compatible con datos y modelo
 \end{textblock}
 }
 
-\only<13>{
+\only<14>{
  \begin{textblock}{80}(0,22)
   \centering
   $P(r,s_2)$ \\ \vspace{0.3cm}
@@ -836,7 +832,7 @@ Creencia previa que sigue siendo compatible con datos y modelo
 }
 
 
-\only<14->{
+\only<15->{
  \begin{textblock}{80}(0,22)
   \centering
   $P(r|s_2)$ \\ \vspace{0.3cm}
@@ -860,8 +856,27 @@ Creencia previa que sigue siendo compatible con datos y modelo
  
 \end{textblock}
 }
- 
-\only<13-14>{
+
+\only<13>{
+\begin{textblock}{80}(0,58)
+\centering
+ \scalebox{1}{
+\tikz{ %
+         \node[factor, minimum size=1cm] (p1) {\includegraphics[width=0.05\textwidth]{auxiliar/images/cerradura.png}} ;
+         \node[det, minimum size=1cm, xshift=1.5cm] (p2) {\includegraphics[width=0.06\textwidth]{auxiliar/images/dedo.png}} ;
+         \node[factor, minimum size=1cm, xshift=3cm] (p3) {} ;
+         
+         
+         \node[const, above=of p1, yshift=0.1cm] (np1) {\Large $?$};
+         \node[const, above=of p2, yshift=0.1cm] (np2) {\Large $0$};
+         \node[const, above=of p3, yshift=0.1cm] (np3) {\Large $?$};
+         } 
+}
+\end{textblock}
+}
+
+
+\only<14-15>{
 \begin{textblock}{80}(0,58)
  \centering 
 \begin{center}
@@ -875,8 +890,8 @@ P(r_i|s_2) = \frac{P(r_i,s_2)}{P(s_2)}
 }
  
 
-\only<15>{
-\begin{textblock}{80}(0,53)
+\only<16>{
+\begin{textblock}{80}(0,58)
 \centering
 \scalebox{1}{
 \tikz{ %
@@ -893,7 +908,7 @@ P(r_i|s_2) = \frac{P(r_i,s_2)}{P(s_2)}
  \end{textblock}
 }
  
- \only<2-12>{
+ \only<2-13>{
 \begin{textblock}{80}(70,14) \centering
 \scalebox{1.2}{
  \tikz{
@@ -939,7 +954,7 @@ P(r_i|s_2) = \frac{P(r_i,s_2)}{P(s_2)}
 }
 
 
-\only<13->{
+\only<14->{
 \begin{textblock}{80}(70,14) \centering
 \scalebox{1.2}{
  \tikz{
