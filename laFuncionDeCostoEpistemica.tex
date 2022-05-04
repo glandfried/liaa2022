@@ -619,8 +619,6 @@ $\bullet$ ¿Es posible la coexistencia con una población apostadora cooperativa
 
 
 
-
-
 \begin{frame}[plain]
 \begin{textblock}{160}(0,4)
  \centering \LARGE Apuesta individual \\
@@ -642,14 +640,14 @@ $\bullet$ ¿Es posible la coexistencia con una población apostadora cooperativa
 \end{equation*}
 }
 
-\onslide<6->{Con frecuencia $p = \lim_{T \rightarrow \infty} n_c/T$}
+\onslide<6->{Con frecuencia típica $p = \lim_{T \rightarrow \infty} n_c/T$}
 \end{frame}
 
 
 \begin{frame}[plain]
 \begin{textblock}{160}(0,4)
  \centering \LARGE Apuesta individual  \\
- \only<5->{\Large Maximizar $r$ }
+ %\only<5->{\Large Maximizar $r$ }
  \end{textblock}
 \vspace{1.2cm}  \centering
 
@@ -691,24 +689,30 @@ $\bullet$ ¿Es posible la coexistencia con una población apostadora cooperativa
 
 \only<4-5>{
 \begin{textblock}{160}(0,46) \centering
-\Large La apuesta no depende de los pagos que ofrece la casa!
+\Large La apuesta no depende de los pagos que ofrece la casa! \\
+\large (No cualquier función de costo ad-hoc tiene esta propiedad)
+
  \end{textblock}
 }
 
 
 \only<6>{
 \begin{textblock}{160}(0,26) \centering
-\includegraphics[width=0.6\textwidth, page=4]{figures/tasa-temporal2.pdf} 
+\includegraphics[width=0.6\textwidth, page=6]{figures/tasa-temporal2.pdf} 
 \end{textblock}
 }
 
-
 \only<7->{
 \begin{textblock}{160}(0,46) \centering
-\Large Con el resultado de las apuestas hacemos inferencia! \\[0.4cm]
+\Large Las apuestas multiplicativas garantizan la inferencia! \\ 
+\large (No cualquier función de costo ad-hoc tiene este propiedad)
+\\[0.4cm]
 
+\Large
 
-\onslide<8>{Más aún, la inferencia Bayesiana es un juego de apuestas!}
+\onslide<8>{La teoría de la probabilidad es un juego de apuestas multiplicativo! \\
+\large (Máxima verosimilitud no lo es, salvo en tiempo infinito)
+}
 \end{textblock}
 }
 
@@ -724,28 +728,240 @@ $\bullet$ ¿Es posible la coexistencia con una población apostadora cooperativa
 
 \end{frame}
 
+
+
+
 \begin{frame}[plain]
 \begin{textblock}{160}(0,4)
- \centering \LARGE Apostar a las dos opciones (Cooperativo)
-\end{textblock}
-\vspace{1.75cm} 
+\LARGE \centering Teoría de la probabilidad \\
+\Large Breve resumen
+\end{textblock} 
+\vspace{1cm} \centering \Large
 
-Como cooperadores queremos maximizar nuestra cuota del fondo común,
+
+ \only<1>{
+  \begin{textblock}{80}(-10,20) \centering
+ \scalebox{0.8}{
+\tikz{ %
+         \node[factor, minimum size=1cm] (p1) {} ;
+         \node[factor, minimum size=1cm, xshift=1.5cm] (p2) {} ;
+         \node[factor, minimum size=1cm, xshift=3cm] (p3) {} ;
+         
+         
+         \node[const, above=of p1, yshift=0.1cm] (np1) {\Large $?$};
+         \node[const, above=of p2, yshift=0.1cm] (np2) {\Large $?$};
+         \node[const, above=of p3, yshift=0.1cm] (np3) {\Large $?$};
+         } 
+}
+\end{textblock}
+}
+
+\only<2>{
+  \begin{textblock}{80}(-10,20) \centering
+ \scalebox{0.8}{
+\tikz{ %
+         \node[factor, minimum size=1cm] (p1) {} ;
+         \node[factor, minimum size=1cm, xshift=1.5cm] (p2) {} ;
+         \node[factor, minimum size=1cm, xshift=3cm] (p3) {} ;
+         
+         
+         \node[const, above=of p1, yshift=0.12cm] (np1) {\Large $0$};
+         \node[const, above=of p2, yshift=0.12cm] (np2) {\Large $1$};
+         \node[const, above=of p3, yshift=0.12cm] (np3) {\Large $0$};
+         } 
+}
+\end{textblock}
+% 
+}
+
+\only<2->{
+\begin{textblock}{100}(55,24) \centering
+\large Principio de integridad (Regla de la suma) \\
+\normalsize
+Las distribuciónes de creencia posibles son la que suman 1
+\end{textblock}
+}
+
+\only<3>{
+  \begin{textblock}{80}(-10,20) \centering
+ \scalebox{0.8}{
+\tikz{ %
+         \node[factor, minimum size=1cm] (p1) {} ;
+         \node[factor, minimum size=1cm, xshift=1.5cm] (p2) {} ;
+         \node[factor, minimum size=1cm, xshift=3cm] (p3) {} ;
+         
+         
+         \node[const, above=of p1, yshift=-0.05cm] (np1) {\Large $1/5$};
+         \node[const, above=of p2, yshift=-0.05cm] (np2) {\Large $3/5$};
+         \node[const, above=of p3, yshift=-0.05cm] (np3) {\Large $1/5$};
+         } 
+}
+\end{textblock}
+% 
+}
+ 
+\only<4>{
+  \begin{textblock}{80}(-10,20) \centering
+ \scalebox{0.8}{
+\tikz{ %
+         \node[factor, minimum size=1cm] (p1) {} ;
+         \node[factor, minimum size=1cm, xshift=1.5cm] (p2) {} ;
+         \node[factor, minimum size=1cm, xshift=3cm] (p3) {} ;
+         
+         
+         \node[const, above=of p1, yshift=-0.05cm] (np1) {\Large $1/3$};
+         \node[const, above=of p2, yshift=-0.05cm] (np2) {\Large $1/3$};
+         \node[const, above=of p3, yshift=-0.05cm] (np3) {\Large $1/3$};
+         } 
+}
+\end{textblock}
+% 
+}
+
+\only<4->{
+\begin{textblock}{100}(55,42) \centering
+\large Principio de indiferencia (Máxima incertidumbre) \\
+\normalsize
+Primer acuerdo intersubjetivo en contextos de incertidumbre
+\end{textblock}
+}
+
+ 
+\only<5-7>{
+ \begin{textblock}{80}(-10,20) \centering
+ \scalebox{0.8}{
+\tikz{ %
+         \node[factor, minimum size=1cm] (p1) {\includegraphics[width=0.05\textwidth]{auxiliar/images/cerradura.png}} ;
+         \node[det, minimum size=1cm, xshift=1.5cm] (p2) {\includegraphics[width=0.06\textwidth]{auxiliar/images/dedo.png}} ;
+         \node[factor, minimum size=1cm, xshift=3cm] (p3) {} ;
+         
+         
+         \node[const, above=of p1, yshift=0.1cm] (np1) {\Large $?$};
+         \node[const, above=of p2, yshift=0.1cm] (np2) {\Large $0$};
+         \node[const, above=of p3, yshift=0.1cm] (np3) {\Large $?$};
+         } 
+}
+\end{textblock}
+}
+
+
+\only<5->{
+\begin{textblock}{80}(-10,35) \centering
+Datos \\[0.2cm]
+
+\only<
+7->{
+ Modelo causal \\[0.3cm]
+\scalebox{0.6}{
+\tikz{        
+    
+    \node[latent] (d) {\includegraphics[width=0.10\textwidth]{auxiliar/images/dedo.png}} ;
+    \node[const,left=of d] (nd) {\Large $s$} ;
+    
+    \node[latent, above=of d, xshift=-1.5cm] (r) {\includegraphics[width=0.12\textwidth]{auxiliar/images/regalo.png}} ;
+    \node[const,left=of r] (nr) {\Large $r$} ;
+    
+    
+    \node[latent, fill=black!30, above=of d, xshift=1.5cm] (c) {\includegraphics[width=0.12\textwidth]{auxiliar/images/cerradura.png}} ;
+    \node[const,left=of c] (nc) {\Large $c$} ;
+         
+    \edge {r,c} {d};
+}
+}
+}
+\end{textblock}
+}
+
+
+\only<5>{
+\begin{textblock}{160}(0,64) \centering \large 
+¿Cómo podemos dar continuidad a los acuerdos intersubjetivos?
+\end{textblock}
+}
+
+\only<6->{
+\begin{textblock}{110}(50,60) \centering
+\large Principio de coherencia (Regla del producto)\\
+\normalsize
+Creencia previa que sigue siendo compatible con datos y modelo \\[-0.3cm]
+\only<8>{
 \begin{equation*}
-\onslide<2->{\text{fondo común}_t = (\omega_t \, b \, q_c ) \, n_c + (\omega_t \, (1-b) \, q_s ) \, n_s }
+P(r_i|s_2, M) \propto \underbrace{P(s_2|r_i,M)}_{\text{predicción}} \, \underbrace{P(r_i|M)}_{\text{prior}}
 \end{equation*}
+}
+\end{textblock}
+}
+
+\only<9>{
+\begin{textblock}{140}(10,73) \centering
+\normalsize
+\begin{equation*}
+P(\text{Hipótesis} = h|\text{Datos} = \{d_1, \dots, d_n\}, M) \propto P(h|M) \ P(d_1|h,M) \, P(d_2|h, d_1,M) \dots
+\end{equation*}
+\end{textblock}
+}
+
+
+\only<10>{
+\begin{textblock}{140}(10,68.75) \centering
+\normalsize
+\begin{equation*}
+P(\text{Hipótesis} = h|\text{Datos} = \{d_1, \dots, d_n\}, M) \propto \overbrace{P(h|M)}^{\text{prior}} \, \underbrace{P(d_1|h,M) \, P(d_2|h, d_1,M)}_{}  \dots
+\end{equation*}
+\end{textblock}
+}
+
+
+\only<10>{
+\begin{textblock}{80}(80,85.5)
+\scriptsize Predicciones a piori, \textbf{las apuestas de las hipótesis}
+\end{textblock}
+}
+
+
+
+\only<8->{
+ \begin{textblock}{80}(-10,20) \centering
+ \scalebox{0.8}{
+\tikz{ %
+         \node[factor, minimum size=1cm] (p1) {\includegraphics[width=0.05\textwidth]{auxiliar/images/cerradura.png}} ;
+         \node[det, minimum size=1cm, xshift=1.5cm] (p2) {\includegraphics[width=0.06\textwidth]{auxiliar/images/dedo.png}} ;
+         \node[factor, minimum size=1cm, xshift=3cm] (p3) {} ;
+         
+         
+         \node[const, above=of p1, yshift=-0.05cm] (np1) {\Large $1/3$};
+         \node[const, above=of p2, yshift=0.1cm] (np2) {\Large $0$};
+         \node[const, above=of p3, yshift=-0.05cm] (np3) {\Large $2/3$};
+         } 
+}
+\end{textblock}
+}
+
+
+\end{frame}
+
+
+\begin{frame}[plain]
+\begin{textblock}{160}(0,4)
+ \centering \LARGE Apuesta cooperativa
+\end{textblock}
+\vspace{1.25cm} 
+
+\begin{equation*}
+\onslide<2->{\text{fondo común}_t = (\omega_t \, b \, Q_c ) \, n_c + (\omega_t \, (1-b) \, Q_s ) \, n_s }
+\end{equation*} \\[-0.3cm]
 \onslide<3->{donde $n_c + n_s = N$ son las veces que salió Cara y Seca en el grupo de tamaño $N$}
 \begin{equation*}
 \begin{split}
-\onslide<4->{\text{couta} = \omega_{t+1} & = \frac{1}{N} \left( (\omega_t \, b \, q_c ) \, n_c  + (\omega_t \, (1-b) \, q_s ) \, n_s }\\
-\onslide<5->{& = \omega_t  \left( b \, q_c  \, \frac{n_c}{N} +  (1-b) \, q_s \, \frac{n_s}{N} \right) } 
+\onslide<4->{\omega_{t+1} & =  \frac{1}{N} \, \text{fondo común}_t \\ }
+\onslide<5->{& = \omega_t  \left( b \, Q_c  \, \frac{n_c}{N} +  (1-b) \, Q_s \, \frac{n_s}{N} \right) } 
 \end{split}
-\end{equation*}
+\end{equation*} \\[0.3cm]
 
 \onslide<6->{Cuando el grupo es de tamaño infinito, la cuota siempre tiene el mismo valor}
 \begin{equation*}
 \begin{split}
-\onslide<7->{ \omega_{t+1} & = \lim_{N \rightarrow \infty } \omega_t  \left( b \, q_c  \, \frac{n_c}{N} +  (1-b) \, q_s \, \frac{n_s}{N} \right) } \onslide<8->{= \omega_t  \underbrace{\left( b \, q_c  \, p +  (1-b) \, q_s \, (1-p)\right)}_{\text{Promedio de pagos}} } 
+\onslide<6->{\lim_{N \rightarrow \infty} \omega_{t+1} & = \omega_t  \underbrace{\left( b \, Q_c  \, p +  (1-b) \, Q_s \, (1-p)\right)}_{\text{Promedio de pagos}} } 
 \end{split}
 \end{equation*}
 \end{frame}
@@ -753,14 +969,68 @@ Como cooperadores queremos maximizar nuestra cuota del fondo común,
 
 \begin{frame}[plain]
 \begin{textblock}{160}(0,4)
- \centering \LARGE Apostar a las dos opciones (Cooperativo)\\
- \Large Maximizar $r$
+ \centering \LARGE Apuesta cooperativa\\
+ \Large Con pagos de la teoría de la probabilidad $Q_c = Q_s = 1$
 \end{textblock}
 \vspace{1.75cm} 
 
+\begin{textblock}{160}(0,19)
 \begin{equation*}
-r = \left( b \, q_c  \, p +  (1-b) \, q_s \, (1-p)\right)
+\omega_{t+1} = \omega_t \, \left( b \, \frac{n_c}{N} +  (1-b) \, \frac{n_s}{N} \right)
 \end{equation*}
+\end{textblock}
+
+
+\only<2>{
+\begin{textblock}{160}(0,30) \centering
+\includegraphics[width=0.55\textwidth, page=3]{figures/tasa-temporal2.pdf} 
+\end{textblock}
+}
+
+\only<3>{
+\begin{textblock}{160}(0,30) \centering
+\includegraphics[width=0.55\textwidth, page=4]{figures/tasa-temporal2.pdf} 
+\end{textblock}
+}
+
+\only<4>{
+\begin{textblock}{160}(0,30) \centering
+\includegraphics[width=0.55\textwidth, page=5]{figures/tasa-temporal2.pdf} 
+\end{textblock}
+}
+
+\only<5->{
+\begin{textblock}{160}(0,38) \centering
+\Large Cooperativamente existe una ventaja a favor de la especialización! \\
+\large Apostar (casi) todos los recursos a la opción más frecuente
+\begin{equation*}
+\underset{b}{\text{arg max}} \lim_{N \rightarrow \infty} \omega_t = 1
+\end{equation*}
+\end{textblock}
+}
+
+
+\only<6>{
+\begin{textblock}{160}(0,70) \centering
+\Large ¿Rompimos la propiedad epistémica? 
+\end{textblock}
+}
+
+
+\only<7->{
+\begin{textblock}{160}(0,70) \centering
+\Large No, es una propiedad meta-epistémica \\
+\large La ciencia es cooperativa porque así aumenta su tasa de crecimiento \\ 
+\only<8->{Las investigaciones deben apostar (casi) todos sus recursos a una opción}
+\end{textblock}
+}
+
+\end{frame}
+
+
+\begin{frame}[plain]
+
+
 
 \vspace{0.3cm} 
 \onslide<2->{Dados los pagos recíprocos $q_c = 1/p$ y $q_s = 1 / (1-p)$}
@@ -782,23 +1052,8 @@ r = \left( b \, q_c  \, p +  (1-b) \, q_s \, (1-p)\right)
 
 \end{frame}
 
-\begin{frame}[plain]
-\begin{textblock}{160}(0,4)
- \centering \LARGE Apostar a las dos opciones (Cooperativo)\\
- \Large Tarea
-\end{textblock}
-\vspace{1.75cm} 
-
-$\bullet$ Maximizar $r$ con pagos sesgados en grupo de tamaño 2 \\
-$\bullet$ Maximizar $r$ con pagos sesgados en grupo de tamaño 3 \\
-$\bullet$ Maximizar $r$ con pagos sesgados en grupo de tamaño infinito.
-
-\vspace{1cm}
-
-Los pagos sesgados son $q_c = 1/q$ y $q_s = 1 / (1-q)$ con $q \neq p$ \\[0.3cm]
 
 
-\end{frame}
 
 % 
 % \begin{frame}[plain]

@@ -91,7 +91,51 @@ djokovic = rgb(0.5,0.2,0.2,1.0)
 edberg= rgb(0,0.8,0.8,1.0)
 lendl = rgb(0.7,0,0.7,1.0)
 borg = rgb(0.8,0.8,0,1.0)
-       
+
+
+r = rep(0,length(a))        
+for(j in seq(1,length(e))){r[j] = coop_temporal_average(1,e[j],0.71,1)}
+plot(e,r, ylim=c(0,0.65), type="l", lwd=4, ,axes = F,ann = F, col=borg)
+points(e[which.max(r)],r[which.max(r)],pch=19,cex=2,col=borg)
+axis(side=2, labels=NA,cex.axis=0.6,tck=0.015)
+axis(side=1, labels=NA,cex.axis=0.6,tck=0.015)
+axis(lwd=0,side=1,cex.axis=1.5,line=-0.3)
+axis(lwd=0,side=2,cex.axis=1.5,line=-0.3)
+axis(lwd=0,side=1, at=0.71, labels=0.71,cex.axis=1.33,line=-0.8,tck=0.015)
+axis(side=1, at=0.71, labels=NA,cex.axis=1.33,line=0,tck=0.01)
+mtext(text= "Apuesta b",side =1,line=2.33,cex=2)
+mtext(text = "Tasa de crecimiento" ,side =2,line=2,cex=2)
+abline(v=0.71, lty=3)
+
+legend(0,0.6,lwd=c(4),title="p = 0.71 \n Tamaño de grupo",
+       legend = seq(1), 
+       col = c(borg), bty = "n",cex = 1.5)
+
+
+
+r = rep(0,length(a))        
+for(j in seq(1,length(e))){r[j] = coop_temporal_average(1,e[j],0.71,1)}
+plot(e,r, ylim=c(0,0.65), type="l", lwd=4, ,axes = F,ann = F, col=borg)
+points(e[which.max(r)],r[which.max(r)],pch=19,cex=2,col=borg)
+for(j in seq(1,length(e))){r[j] = coop_temporal_average(2,e[j],0.71,2)}
+lines(e,r, lwd=4, col=lendl)
+points(e[which.max(r)],r[which.max(r)],pch=19,cex=2,col=lendl)
+axis(side=2, labels=NA,cex.axis=0.6,tck=0.015)
+axis(side=1, labels=NA,cex.axis=0.6,tck=0.015)
+axis(lwd=0,side=1,cex.axis=1.5,line=-0.3)
+axis(lwd=0,side=2,cex.axis=1.5,line=-0.3)
+axis(lwd=0,side=1, at=0.71, labels=0.71,cex.axis=1.33,line=-0.8,tck=0.015)
+axis(side=1, at=0.71, labels=NA,cex.axis=1.33,line=0,tck=0.01)
+mtext(text= "Apuesta b",side =1,line=2.33,cex=2)
+mtext(text = "Tasa de crecimiento" ,side =2,line=2,cex=2)
+abline(v=0.71, lty=3)
+
+legend(0,0.6,lwd=c(4,4),title="p = 0.71 \n Tamaño de grupo",
+       legend = seq(1,2), 
+       col = c(borg,lendl), bty = "n",cex = 1.5)
+
+
+
 r = rep(0,length(a))        
 for(j in seq(1,length(e))){r[j] = coop_temporal_average(1,e[j],0.71,1)}
 plot(e,r, ylim=c(0,0.65), type="l", lwd=4, ,axes = F,ann = F, col=borg)
@@ -108,11 +152,11 @@ axis(lwd=0,side=1,cex.axis=1.5,line=-0.3)
 axis(lwd=0,side=2,cex.axis=1.5,line=-0.3)
 axis(lwd=0,side=1, at=0.71, labels=0.71,cex.axis=1.33,line=-0.8,tck=0.015)
 axis(side=1, at=0.71, labels=NA,cex.axis=1.33,line=0,tck=0.01)
-mtext(text= "Estrategia",side =1,line=2.33,cex=2)
+mtext(text= "Apuesta b",side =1,line=2.33,cex=2)
 mtext(text = "Tasa de crecimiento" ,side =2,line=2,cex=2)
 abline(v=0.71, lty=3)
 
-legend(0,0.6,lwd=c(4,4,4),title="Ambiente = 0.71 \n Tamaño de grupo",
+legend(0,0.6,lwd=c(4,4,4),title="p = 0.71 \n Tamaño de grupo",
        legend = seq(1,3), 
        col = c(borg,lendl,djokovic), bty = "n",cex = 1.5)
 
