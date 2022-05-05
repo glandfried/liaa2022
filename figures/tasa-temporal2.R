@@ -180,6 +180,19 @@ legend(0.02,0.6,title="p = 0.71",
        legend = c("argmax b = p"), pch=c(19) ,
        col = c(rgb(0.7,0.2,0.2)), bty = "n",cex = 1.5)
 
+ 
+p = 0.9
+Q_c = 1/(p) 
+Q_s = 1/((1-p)*0.8)
+b = seq(0,1,by=0.01)
+plot(b, b*p*Q_c + (1-b)*(1-p)*Q_s, type="l",lwd=3,axes = F,ann = F)
+axis(side=2, labels=NA,cex.axis=0.6,tck=0.015)
+axis(side=1, labels=NA,cex.axis=0.6,tck=0.015)
+axis(lwd=0,side=1,cex.axis=1.5,line=-0.3)
+axis(lwd=0,side=2, at=1,las=1, labels= c(1),cex.axis=1.5,line=-0.3)
+mtext(text= "Apuestas b",side =1,line=2.33,cex=2)
+mtext(text = "Tasa de crecimiento" ,side =2,line=1,cex=2)
+t
 
 #######################################
 # end 
