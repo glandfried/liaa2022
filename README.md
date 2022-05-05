@@ -1,5 +1,5 @@
 # liaa2022
-Charla: "La función de costo epistémico-evolutiva"
+Charla: ["La función de costo epistémico-evolutiva"](https://github.com/glandfried/liaa2022/releases/download/charla/laFuncionDeCostoEpistemica.pdf)
 
 Voy a hablar de los resultados que considero más importantes de mi doctorado para tratar explicar las razones de mis objetivos futuros (Pacha Pampas).
 
