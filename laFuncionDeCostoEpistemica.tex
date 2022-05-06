@@ -205,7 +205,7 @@ Crecimiento de los linajes
 f(\Aa) =
 \begin{cases}
  1.5 & \Aa = \text{ \en{Head}\es{Cara} } \\
- 0.6 & \Aa = \text{ \en{Tail}\es{Sello} }
+ 0.6 & \Aa = \text{ \en{Tail}\es{Seca} }
 \end{cases}
 \end{equation*}
 
@@ -279,7 +279,7 @@ Trayectorias individuales en el tiempo
 \begin{equation*} 
 \begin{split}
 \omega(T) & = \prod^T_{t=1} f(\Aa(t)) = f(\text{\en{head}\es{cara}})^{n_1} f(\text{\en{tail}\es{sello}})^{n_2}  \approx r^T \\
-\onslide<3->{\left( \lim_{T \rightarrow \infty} \omega(T) \right)^{1/T} & =  r}  \onslide<4->{= 1.5^{1/2} \cdot 0.6^{1/2}} \onslide<5>{ \approx 0.95 } 
+\onslide<3->{\lim_{T \rightarrow \infty} \omega(T)^{1/T} & =  r}  \onslide<4->{= 1.5^{1/2} \cdot 0.6^{1/2}} \onslide<5>{ \approx 0.95 } 
 \end{split}
 \end{equation*}
 \end{textblock}
@@ -344,7 +344,7 @@ Cooperación
 \begin{equation*} 
 \begin{split}
 \omega(t+1) & \ \, = \frac{1}{N} \big(\overbrace{\omega(t) \, f(\text{Cara}) \, n_c + \omega(t) \, f(\text{Seca}) \, n_s }^{\text{Fondo común}}  \big) \\
-& \onslide<3->{\overset{\hfrac{\lim }{N\rightarrow \infty}}{=}  \omega(t) (\underbrace{f(\text{Cara}) \, p ) + (f(\text{Seca}) \, (1-p) }_{\text{Tasa de crecimiento}})   \\}
+& \onslide<3->{\overset{\hfrac{\lim }{N\rightarrow \infty}}{=}  \omega(t) \, (\underbrace{f(\text{Cara}) \, p  + f(\text{Seca}) \, (1-p) }_{\text{Tasa de crecimiento}})   \\}
 \end{split}
 \end{equation*}
 \end{textblock}
@@ -1071,23 +1071,23 @@ $\bullet$ $Q_s > 1/(1-p)$: pago del descubrimiento
 
 \end{frame}
 
+% 
+% \begin{frame}[plain]
+% \begin{textblock}{160}(0,4)
+%  \centering \LARGE Mi apuesta científica \\
+%  \Large Observación: involución cultural por pérdida de diversidad cultural
+%  \end{textblock}
+% \vspace{1.75cm} \centering
+% 
+% \includegraphics[width=0.65\textwidth]{auxiliar/images/output/cisma.png}  
+% 
+% \end{frame}
+
 
 \begin{frame}[plain]
 \begin{textblock}{160}(0,4)
  \centering \LARGE Mi apuesta científica \\
- \Large Observación: involución cultural por pérdida de diversidad cultural
- \end{textblock}
-\vspace{1.75cm} \centering
-
-\includegraphics[width=0.65\textwidth]{auxiliar/images/output/cisma.png}  
-
-\end{frame}
-
-
-\begin{frame}[plain]
-\begin{textblock}{160}(0,4)
- \centering \LARGE Mi apuesta científica \\
- \Large Problema: pérdida global de diversidad cultural (1850 - )
+ \Large Causa: pérdida global de diversidad cultural (1850 - )
  \end{textblock}
 \vspace{1.25cm} \centering
 
